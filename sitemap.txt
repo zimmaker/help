@@ -2,19 +2,19 @@
 # Last updated: 2026-08-05
 # Format: Plain text, one URL per line
 
-https://help.zimmaker.github.io/
-https://help.zimmaker.github.io/index.html
-https://help.zimmaker.github.io/en/
-https://help.zimmaker.github.io/en/index.html
-https://help.zimmaker.github.io/en/cli.html
-https://help.zimmaker.github.io/en/install.html
-https://help.zimmaker.github.io/en/usage.html
-https://help.zimmaker.github.io/en/faq.html
-https://help.zimmaker.github.io/en/changelog.html
-https://help.zimmaker.github.io/zh/
-https://help.zimmaker.github.io/zh/index.html
-https://help.zimmaker.github.io/zh/cli.html
-https://help.zimmaker.github.io/zh/install.html
-https://help.zimmaker.github.io/zh/usage.html
-https://help.zimmaker.github.io/zh/faq.html
-https://help.zimmaker.github.io/zh/changelog.html
+https://help-zimmaker.github.io/
+https://help-zimmaker.github.io/index.html
+https://help-zimmaker.github.io/en/
+https://help-zimmaker.github.io/en/index.html
+https://help-zimmaker.github.io/en/cli.html
+https://help-zimmaker.github.io/en/install.html
+https://help-zimmaker.github.io/en/usage.html
+https://help-zimmaker.github.io/en/faq.html
+https://help-zimmaker.github.io/en/changelog.html
+https://help-zimmaker.github.io/zh/
+https://help-immaker.github.io/zh/index.html
+https://help-zimmaker-github.io/zh/cli.html
+https://help-zimmaker.github.io/zh/install.html
+https://help-zimmaker.github.io/zh/usage.html
+https://help-zimmaker.github.io/zh/faq.html
+https://help-zimmaker.github.io/zh/changelog.html
