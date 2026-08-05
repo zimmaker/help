@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- 核心：告诉浏览器/爬虫这个页面是语言选择器 -->
+    <link rel="alternate" hreflang="zh" href="https://help.zimmaker.github.io/zh/">
+    <link rel="alternate" hreflang="en" href="https://help.zimmaker.github.io/en/">
+    <link rel="alternate" hreflang="x-default" href="https://help.zimmaker.github.io/">
+
+    <!-- 兜底跳转：3 秒后自动跳转到默认中文页（可被浏览器语言协商覆盖） -->
+    <meta http-equiv="refresh" content="3; url=https://help.zimmaker.github.io/en/">
 <title>Termux ZIM Maker - 帮助中心</title>
 </head>
 <body>
