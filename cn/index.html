@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termux ZIM Maker - 帮助中心</title>
+</head>
+<body>
+
+<header>
+<h1>Termux ZIM Maker - 帮助中心</h1>
+<nav>
+<p>
+<a href="../en/index.html">English</a> |
+<a href="index.html">中文</a> |
+<a href="cli.html">命令行参考</a> |
+<a href="install.html">安装指南</a> |
+<a href="usage.html">使用示例</a> |
+<a href="faq.html">常见问题</a> |
+<a href="changelog.html">更新日志</a>
+</p>
+</nav>
+</header>
+
+<main>
+
+<section>
+<h2>什么是 Termux ZIM Maker？</h2>
+<p>
+Termux ZIM Maker 是一款轻量 C++ 命令行工具，能将本地 HTML 文件夹打包成 <code>.zim</code> 文件，供 Kiwix 离线阅读。它原生运行于 Termux（Android）、Alpine Linux、Debian 和 Ubuntu —— 无需 proot、glibc、Python 或 Node.js。
+</p>
+</section>
+
+<section>
+<h2>核心功能</h2>
+<ul>
+<li>递归扫描目录，将所有文件打包进 ZIM 档案</li>
+<li>自动识别常见文件扩展名的 MIME 类型</li>
+<li>将 <code>index.html</code>（或第一个 HTML 文件）设为欢迎页</li>
+<li>基于 Xapian 生成全文搜索索引</li>
+<li>写入元数据：标题、描述、语言</li>
+<li>输出 ZIM6 格式（lzma2 / zstd），兼容 Kiwix 3.0+</li>
+</ul>
+</section>
+
+<section>
+<h2>快速开始</h2>
+<pre><code>pkg install libzim kiwix-tools
+chmod +x make_zim
+./make_zim --dir ~/myhtml --out demo.zim --title "Demo" --lang zh</code></pre>
+<p>详细步骤见 <a href="install.html">安装指南</a> 和 <a href="usage.html">使用示例</a>。</p>
+</section>
+
+<section>
+<h2>项目链接</h2>
+<ul>
+<li>GitHub: <a href="https://github.com/zimmaker/termux-zim-maker">github.com/zimmaker/termux-zim-maker</a></li>
+<li>ZIM 规范: <a href="https://openzim.org/">openzim.org</a></li>
+<li>Kiwix: <a href="https://www.kiwix.org/">kiwix.org</a></li>
+</ul>
+</section>
+
+</main>
+
+<footer>
+<p><small>Termux ZIM Maker · MIT 协议 · <a href="changelog.html">更新日志</a></small></p>
+</footer>
+
+</body>
+</html>
