@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>命令行参考 - Termux ZIM Maker</title>
+</head>
+<body>
+
+<header>
+<h1>命令行参考</h1>
+<nav>
+<p>
+<a href="../en/index.html">English</a> |
+<a href="index.html">中文</a> |
+<a href="cli.html">命令行参考</a> |
+<a href="install.html">安装指南</a> |
+<a href="usage.html">使用示例</a> |
+<a href="faq.html">常见问题</a> |
+<a href="changelog.html">更新日志</a>
+</p>
+</nav>
+</header>
+
+<main>
+
+<section>
+<h2>命令格式</h2>
+<pre><code>make_zim --dir &lt;html目录&gt; --out &lt;输出.zim&gt;
+         --title &lt;标题&gt; [--desc &lt;描述&gt;] [--lang &lt;语言&gt;]</code></pre>
+</section>
+
+<section>
+<h2>参数说明</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr><th>参数</th><th>必填</th><th>说明</th><th>默认值</th></tr>
+</thead>
+<tbody>
+<tr><td><code>--dir</code></td><td>是</td><td>本地 HTML 文件夹路径（递归遍历）</td><td>—</td></tr>
+<tr><td><code>--out</code></td><td>是</td><td>输出 ZIM 文件名</td><td>—</td></tr>
+<tr><td><code>--title</code></td><td>是</td><td>ZIM 标题（写入元数据）</td><td>—</td></tr>
+<tr><td><code>--desc</code></td><td>否</td><td>描述信息（写入元数据）</td><td><code>Created on Termux</code></td></tr>
+<tr><td><code>--lang</code></td><td>否</td><td>ISO 639 语言代码（如 <code>eng</code>、<code>zh</code>、<code>zhp</code>）</td><td><code>eng</code></td></tr>
+<tr><td><code>--help</code></td><td>否</td><td>显示帮助信息并退出</td><td>—</td></tr>
+<tr><td><code>--version</code></td><td>否</td><td>输出版本号并退出</td><td>—</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>退出码</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr><th>代码</th><th>含义</th></tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>成功</td></tr>
+<tr><td>1</td><td>通用错误（参数无效、I/O 失败）</td></tr>
+<tr><td>2</td><td>ZIM 创建失败（libzim 错误）</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>相关页面</h2>
+<ul>
+<li><a href="usage.html">使用示例</a></li>
+<li><a href="install.html">安装指南</a></li>
+<li><a href="faq.html">常见问题</a></li>
+</ul>
+</section>
+
+</main>
+
+<footer>
+<p><small>Termux ZIM Maker · MIT 协议 · <a href="changelog.html">更新日志</a></small></p>
+</footer>
+
+</body>
+</html>
