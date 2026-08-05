@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ - Termux ZIM Maker</title>
+</head>
+<body>
+
+<header>
+<h1>Frequently Asked Questions</h1>
+<nav>
+<p>
+<a href="index.html">English</a> |
+<a href="../zh/index.html">中文</a> |
+<a href="cli.html">CLI Reference</a> |
+<a href="install.html">Installation</a> |
+<a href="usage.html">Usage Examples</a> |
+<a href="faq.html">FAQ</a> |
+<a href="changelog.html">Changelog</a>
+</p>
+</nav>
+</header>
+
+<main>
+
+<section>
+<h2>Q: Kiwix opens my ZIM but shows a blank page. Why?</h2>
+<p>A: Make sure your folder contains an <code>index.html</code> at the root. Termux ZIM Maker sets the first HTML file as the welcome page, but if your entry point is named differently (e.g. <code>main.html</code>), rename it to <code>index.html</code>.</p>
+</section>
+
+<section>
+<h2>Q: <code>pkg-config --libs libzim</code> returns nothing. How do I fix it?</h2>
+<p>A: Install pkg-config first: <code>pkg install pkg-config</code>. Then verify libzim.pc exists in <code>/data/data/com.termux/files/usr/lib/pkgconfig/</code>.</p>
+</section>
+
+<section>
+<h2>Q: Can I run this on a PC (not Termux)?</h2>
+<p>A: Yes. It works on Alpine, Debian, Ubuntu, and any Linux with libzim 9.x. The binary is a standard ELF executable.</p>
+</section>
+
+<section>
+<h2>Q: Does it support images, CSS, and JavaScript inside the ZIM?</h2>
+<p>A: Yes. Any file type is packaged. MIME types are auto-detected for common extensions. Unknown extensions default to <code>application/octet-stream</code>.</p>
+</section>
+
+<section>
+<h2>Q: How large can the input folder be?</h2>
+<p>A: All files are read into memory at once. For directories under ~500MB this is fine. For GB-scale input, ensure at least 4GB RAM or use libzim's streaming API directly.</p>
+</section>
+
+<section>
+<h2>Q: Is the output ZIM6 or ZIM5?</h2>
+<p>A: ZIM6 (lzma2 / zstd compression), compatible with Kiwix 3.0 and later.</p>
+</section>
+
+<section>
+<h2>Q: Why not use <code>zimwriterfs</code>?</h2>
+<p>A: <code>zimwriterfs</code> is a great tool but depends on glibc and FUSE, which are not available in bare Termux. Termux ZIM Maker is a single static-friendly binary with no FUSE dependency.</p>
+</section>
+
+<section>
+<h2>Q: Search doesn't return results. What's wrong?</h2>
+<p>A: Full-text search requires the Xapian index. Make sure libzim was built with Xapian support (default in Termux apt). Use <code>kiwix-search output.zim "keyword"</code> to test.</p>
+</section>
+
+</main>
+
+<footer>
+<p><small>Termux ZIM Maker · MIT License · <a href="changelog.html">Changelog</a></small></p>
+</footer>
+
+</body>
+</html>

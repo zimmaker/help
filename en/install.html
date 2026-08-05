@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Installation - Termux ZIM Maker</title>
+</head>
+<body>
+
+<header>
+<h1>Installation Guide</h1>
+<nav>
+<p>
+<a href="index.html">English</a> |
+<a href="../zh/index.html">中文</a> |
+<a href="cli.html">CLI Reference</a> |
+<a href="install.html">Installation</a> |
+<a href="usage.html">Usage Examples</a> |
+<a href="faq.html">FAQ</a> |
+<a href="changelog.html">Changelog</a>
+</p>
+</nav>
+</header>
+
+<main>
+
+<section>
+<h2>Termux (Android)</h2>
+<pre><code>pkg update
+pkg install -y clang libc++ libzim kiwix-tools</code></pre>
+<p>libzim is provided as a native aarch64 bionic build at <code>/data/data/com.termux/files/usr/lib/libzim.so</code>. No proot or glibc needed.</p>
+</section>
+
+<section>
+<h2>Alpine Linux</h2>
+<pre><code>apk add clang libc++-dev pkgconf libzim-dev zlib-dev icu-dev xz-dev zstd-dev xapian-core-dev</code></pre>
+</section>
+
+<section>
+<h2>Debian / Ubuntu</h2>
+<pre><code>apt update
+apt install -y clang libc++-dev pkg-config libzim-dev kiwix-tools</code></pre>
+</section>
+
+<section>
+<h2>Build from Source</h2>
+<pre><code>git clone https://github.com/zimmaker/termux-zim-maker.git
+cd termux-zim-maker
+./build.sh</code></pre>
+<p>Or manually:</p>
+<pre><code>clang++ make_zim.cpp -o make_zim -Ivendor $(pkg-config --cflags --libs libzim) -std=c++17</code></pre>
+</section>
+
+<section>
+<h2>Verify Installation</h2>
+<pre><code>./make_zim --help</code></pre>
+<p>You should see the usage banner printed.</p>
+</section>
+
+<section>
+<h2>Verified Versions</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr><th>Component</th><th>Version</th><th>Source</th></tr>
+</thead>
+<tbody>
+<tr><td>libzim</td><td>9.8.1</td><td>Termux apt</td></tr>
+<tr><td>kiwix-tools</td><td>3.8.2</td><td>Termux apt</td></tr>
+<tr><td>clang</td><td>Termux default</td><td>Termux apt</td></tr>
+</tbody>
+</table>
+</section>
+
+</main>
+
+<footer>
+<p><small>Termux ZIM Maker · MIT License · <a href="changelog.html">Changelog</a></small></p>
+</footer>
+
+</body>
+</html>

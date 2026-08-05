@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usage Examples - Termux ZIM Maker</title>
+</head>
+<body>
+
+<header>
+<h1>Usage Examples</h1>
+<nav>
+<p>
+<a href="index.html">English</a> |
+<a href="../zh/index.html">中文</a> |
+<a href="cli.html">CLI Reference</a> |
+<a href="install.html">Installation</a> |
+<a href="usage.html">Usage Examples</a> |
+<a href="faq.html">FAQ</a> |
+<a href="changelog.html">Changelog</a>
+</p>
+</nav>
+</header>
+
+<main>
+
+<section>
+<h2>Example 1: Minimal Pack</h2>
+<p>Create a simple HTML folder and package it:</p>
+<pre><code>mkdir -p ~/myhtml/sub
+echo '&lt;html&gt;&lt;body&gt;&lt;h1&gt;Home&lt;/h1&gt;&lt;a href="sub/page.html"&gt;Sub&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;' &gt; ~/myhtml/index.html
+echo '&lt;html&gt;&lt;body&gt;&lt;h1&gt;Sub Page&lt;/h1&gt;&lt;p&gt;Hello ZIM&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;' &gt; ~/myhtml/sub/page.html
+./make_zim --dir ~/myhtml --out demo.zim --title "Demo Site" --lang zh</code></pre>
+</section>
+
+<section>
+<h2>Example 2: With Description</h2>
+<pre><code>./make_zim --dir ~/wiki --out wiki.zim --title "My Wiki" --desc "Offline wiki snapshot" --lang eng</code></pre>
+</section>
+
+<section>
+<h2>Example 3: Verify with kiwix-tools</h2>
+<pre><code>kiwix-manage demo.zim --show
+kiwix-serve --port=8080 demo.zim
+kiwix-search demo.zim "Hello"</code></pre>
+<ul>
+<li><code>kiwix-manage --show</code>: lists metadata and articles inside the ZIM</li>
+<li><code>kiwix-serve</code>: serves the ZIM over HTTP for browser access</li>
+<li><code>kiwix-search</code>: performs a full-text search (requires Xapian index)</li>
+</ul>
+</section>
+
+<section>
+<h2>Example 4: Package a Static Blog</h2>
+<pre><code>./make_zim --dir ~/blog/public --out blog.zim --title "My Blog" --desc "Offline blog archive" --lang zhp</code></pre>
+<p>Point your static site generator (Hugo, Jekyll, Hexo) output to <code>--dir</code> and you get an offline-readable ZIM.</p>
+</section>
+
+<section>
+<h2>Example 5: Batch Processing</h2>
+<pre><code>for dir in ~/sites/*/; do
+  name=$(basename "$dir")
+  ./make_zim --dir "$dir" --out "${name}.zim" --title "$name" --lang zh
+done</code></pre>
+</section>
+
+</main>
+
+<footer>
+<p><small>Termux ZIM Maker · MIT License · <a href="changelog.html">Changelog</a></small></p>
+</footer>
+
+</body>
+</html>

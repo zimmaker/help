@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLI Reference - Termux ZIM Maker</title>
+</head>
+<body>
+
+<header>
+<h1>CLI Reference</h1>
+<nav>
+<p>
+<a href="index.html">English</a> |
+<a href="../zh/index.html">中文</a> |
+<a href="cli.html">CLI Reference</a> |
+<a href="install.html">Installation</a> |
+<a href="usage.html">Usage Examples</a> |
+<a href="faq.html">FAQ</a> |
+<a href="changelog.html">Changelog</a>
+</p>
+</nav>
+</header>
+
+<main>
+
+<section>
+<h2>Synopsis</h2>
+<pre><code>make_zim --dir &lt;html_dir&gt; --out &lt;output.zim&gt;
+         --title &lt;title&gt; [--desc &lt;desc&gt;] [--lang &lt;lang&gt;]</code></pre>
+</section>
+
+<section>
+<h2>Options</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr><th>Option</th><th>Required</th><th>Description</th><th>Default</th></tr>
+</thead>
+<tbody>
+<tr><td><code>--dir</code></td><td>Yes</td><td>Path to the local HTML folder (recursively scanned)</td><td>—</td></tr>
+<tr><td><code>--out</code></td><td>Yes</td><td>Output ZIM filename</td><td>—</td></tr>
+<tr><td><code>--title</code></td><td>Yes</td><td>Title written into ZIM metadata</td><td>—</td></tr>
+<tr><td><code>--desc</code></td><td>No</td><td>Description written into ZIM metadata</td><td><code>Created on Termux</code></td></tr>
+<tr><td><code>--lang</code></td><td>No</td><td>ISO 639 language code (e.g. <code>eng</code>, <code>zh</code>, <code>zhp</code>)</td><td><code>eng</code></td></tr>
+<tr><td><code>--help</code></td><td>No</td><td>Show help message and exit</td><td>—</td></tr>
+<tr><td><code>--version</code></td><td>No</td><td>Print version and exit</td><td>—</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Exit Codes</h2>
+<table border="1" cellpadding="6" cellspacing="0">
+<thead>
+<tr><th>Code</th><th>Meaning</th></tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>Success</td></tr>
+<tr><td>1</td><td>General error (invalid arguments, I/O failure)</td></tr>
+<tr><td>2</td><td>ZIM creation failed (libzim error)</td></tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>See Also</h2>
+<ul>
+<li><a href="usage.html">Usage Examples</a></li>
+<li><a href="install.html">Installation</a></li>
+<li><a href="faq.html">FAQ</a></li>
+</ul>
+</section>
+
+</main>
+
+<footer>
+<p><small>Termux ZIM Maker · MIT License · <a href="changelog.html">Changelog</a></small></p>
+</footer>
+
+</body>
+</html>
