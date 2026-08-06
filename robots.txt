@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://zimmaker.github.io/help/sitemap.txt
+Sitemap: https://zimmaker.github.io/help/sitemap.xml
