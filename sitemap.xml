@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://zimmaker.github.io/help/</loc></url>
-  <url><loc>https://zimmaker.github.io/help/index.html</loc></url>
+  <url><loc>https://zimmaker.github.io/help/en/</loc></url>
+  <url><loc>https://zimmaker.github.io/help/en/changelog.html</loc></url>
+  <url><loc>https://zimmaker.github.io/help/en/cli.html</loc></url>
+  <url><loc>https://zimmaker.github.io/help/en/faq.html</loc></url>
+  <url><loc>https://zimmaker.github.io/help/en/install.html</loc></url>
+  <url><loc>https://zimmaker.github.io/help/en/usage.html</loc></url>
+  <url><loc>https://zimmaker.github.io/help/zh/</loc></url>
+  <url><loc>https://zimmaker.github.io/help/zh/changelog.html</loc></url>
+  <url><loc>https://zimmaker.github.io/help/zh/cli.html</loc></url>
+  <url><loc>https://zimmaker.github.io/help/zh/faq.html</loc></url>
+  <url><loc>https://zimmaker.github.io/help/zh/install.html</loc></url>
+  <url><loc>https://zimmaker.github.io/help/zh/usage.html</loc></url>
 </urlset>
