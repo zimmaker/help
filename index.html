@@ -59,6 +59,25 @@
   <li><a href="https://zimmaker.github.io/help/en/changelog.html">Changelog</a></li>
 </ul>
 
+  <h3>GPG Signing Key</h3>
+  <p>
+  All official ZIM releases are signed with the following key.
+Any ZIM file without a valid .asc signature is not produced by Zimmaker.</p>
+    <ul>
+    <li>Fingerprint: 2DBE5326AA0C409B9E958C816E443E21F230376B</li>
+    <li>   Key ID: 6E443E21F230376B</li>
+     <li>  UID: Zimmaker <a href="mailto:kam62869536@hotmail.com">       kam62869536@hotmail.com</a></li>
+     <li> Created: 2026-08-05</li>
+     <li>  Algorithm: RSA 4096</li>
+     </ui>
+  </p><li>Verification:
+gpg --import zimmaker-pub.asc
+gpg --verify help-zimmaker.zim.asc help-zimmaker.zim</li><p>
+
+<p><ui><li>Note:
+The private key is never published.
+The revocation certificate is stored offline.
+Only signatures verified against the above fingerprint should be trusted.</ui></li></p>
   <h3>下载zim/Download-zim</h3>
   <ul>
     <li><a href="help-zimmaker.zim" download>Download/下载</a></li>
